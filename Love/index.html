@@ -1,0 +1,34 @@
+<head>
+    <title>Are You The Love of My Life?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game" class="game-container">
+        <h1>Are You The Love Of My Life,Maya?</h1>
+        <p>Answer truthfully!</p>
+        <button onclick="yesAnswer()">Yes</button>
+        <button onclick="noAnswer()">No</button>
+        <p id="response" style="font-size: 1.5rem; margin-top: 20px;"></p>
+    </div>
+
+    <div>
+        <script>
+            // Function that applies only if the user clicks "Yes"
+            function yesAnswer() {
+                document.getElementById("response").textContent = "Well...I Never told u that i appreciate ur presence in my life, ur my true sunshine, u r my evreything,I LOVE YOU";
+            }
+            function noAnswer() {
+                document.getElementById("response").textContent = ""; // Clear the response
+                let game = document.getElementById("game");
+                let randomTop = Math.floor(Math.random() * (window.innerHeight - game.offsetHeight));
+                let randomLeft = Math.floor(Math.random() * (window.innerWidth - game.offsetWidth));
+    
+                game.style.position = "absolute";
+                game.style.top = randomTop + "px";
+                game.style.left = randomLeft + "px";
+            }
+            
+        </script>
+</div>
+</body>
+</html>
